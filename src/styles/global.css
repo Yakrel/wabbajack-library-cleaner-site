@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Custom theme colors */
+@theme {
+  --color-primary: #7c3aed;
+  --color-primary-dark: #5b21b6;
+  --color-secondary: #10b981;
+  --color-bg-dark: #0f172a;
+  --color-bg-darker: #020617;
+  --color-bg-card: #1e293b;
+  --color-border: #334155;
+}

@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+const { src, alt, caption } = Astro.props;
+---
+
+<div class="text-center">
+  <img 
+    src={src} 
+    alt={alt} 
+    class="w-full rounded-xl border border-[#334155] mb-3 transition-transform duration-200 hover:scale-[1.02] cursor-pointer"
+    loading="lazy"
+  />
+  <p class="text-slate-400 text-sm">{caption}</p>
+</div>
