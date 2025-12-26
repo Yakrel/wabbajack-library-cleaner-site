@@ -12,8 +12,9 @@ const { src, alt, caption } = Astro.props;
   <img 
     src={src} 
     alt={alt} 
-    class="w-full rounded-xl border border-[#334155] mb-3 transition-transform duration-200 hover:scale-[1.02] cursor-pointer"
+    class="screenshot-img w-full rounded-xl border border-[#334155] mb-3 transition-transform duration-200 hover:scale-[1.02] cursor-pointer"
     loading="lazy"
+    onclick="openLightbox(this.src)"
   />
   <p class="text-slate-400 text-sm">{caption}</p>
 </div>

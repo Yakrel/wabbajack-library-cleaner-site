@@ -27,5 +27,33 @@ const { title, description = "Clean up your Wabbajack downloads folder and free 
 </head>
 <body class="bg-[#020617] text-slate-100 font-sans leading-relaxed">
   <slot />
+  
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Screenshot" class="max-w-full max-h-full rounded-lg" onclick="event.stopPropagation()">
+    <button class="absolute top-4 right-4 text-white text-4xl hover:text-violet-400 transition-colors" onclick="closeLightbox()">&times;</button>
+  </div>
+  
+  <script is:inline>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>
