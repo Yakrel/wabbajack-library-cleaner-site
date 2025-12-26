@@ -1,6 +1,8 @@
 # Wabbajack Library Cleaner Website
 
-Website for the Wabbajack Library Cleaner project.
+The official landing page and documentation site for the [Wabbajack Library Cleaner](https://github.com/Yakrel/wabbajack-library-cleaner) - a high-performance Rust tool for managing and cleaning up Wabbajack download directories.
+
+**Live Site:** [cleaner.byetgin.com](https://cleaner.byetgin.com)
 
 ## Tech Stack
 
@@ -20,23 +22,7 @@ npm run dev
 
 # Build for production
 npm run build
-
-# Preview production build
-npm run preview
 ```
-
-## Deployment
-
-The site automatically deploys to GitHub Pages when pushing to `main` branch.
-
-### Custom Domain Setup
-
-1. In GitHub repo settings → Pages, add custom domain: `cleaner.byetgin.com`
-2. Add DNS CNAME record:
-   - Host: `cleaner`
-   - Value: `yakrel.github.io`
-3. Wait for DNS propagation
-4. Enable "Enforce HTTPS"
 
 ## Project Structure
 
