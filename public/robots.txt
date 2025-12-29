@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cleaner.byetgin.com/sitemap.xml
+Sitemap: https://cleaner.byetgin.com/sitemap-index.xml
