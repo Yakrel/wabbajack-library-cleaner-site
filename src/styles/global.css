@@ -30,9 +30,11 @@
 .border-wj-purple { border-color: var(--color-primary); }
 .border-wj-green { border-color: var(--color-secondary); }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Smooth scrolling - respect user preferences */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Custom scrollbar */
