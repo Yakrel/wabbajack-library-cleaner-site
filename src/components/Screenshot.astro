@@ -11,11 +11,11 @@ interface Props {
 const { src, alt, caption } = Astro.props;
 ---
 
-<div class="text-center">
+<figure class="text-center">
   <Image 
     src={src} 
     alt={alt} 
     class="screenshot-img w-full rounded-xl border border-[#334155] mb-3 transition-transform duration-200 hover:scale-[1.02] cursor-pointer"
   />
-  <p class="text-slate-400 text-sm">{caption}</p>
-</div>
+  <figcaption class="text-slate-400 text-sm">{caption}</figcaption>
+</figure>
