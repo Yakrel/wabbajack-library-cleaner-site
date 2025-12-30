@@ -2,11 +2,11 @@
 
 /* Custom theme colors */
 @theme {
-  --color-primary: #9d00ff; /* Wabbajack Purple */
-  --color-primary-dark: #7a00c7;
-  --color-primary-light: #b833ff;
-  --color-secondary: #00d299; /* Wabbajack Green */
-  --color-secondary-dark: #00a87a;
+  --color-primary: #4338ca; /* Favicon Indigo */
+  --color-primary-dark: #3730a3;
+  --color-primary-light: #6366f1;
+  --color-secondary: #0d9488; /* Favicon Teal */
+  --color-secondary-dark: #0f766e;
   --color-accent: #da732c; /* Nexus Orange */
   --color-accent-dark: #b86125;
   --color-bg-dark: #0f172a;
@@ -18,17 +18,17 @@
 }
 
 /* Custom utility classes */
-.text-wj-purple { color: var(--color-primary); }
-.text-wj-green { color: var(--color-secondary); }
+.text-wj-blue { color: var(--color-primary); }
+.text-wj-teal { color: var(--color-secondary); }
 .text-wj-orange { color: var(--color-accent); }
-.bg-wj-purple { background-color: var(--color-primary); }
-.bg-wj-green { background-color: var(--color-secondary); }
+.bg-wj-blue { background-color: var(--color-primary); }
+.bg-wj-teal { background-color: var(--color-secondary); }
 .bg-wj-orange { background-color: var(--color-accent); }
-.from-wj-purple { --tw-gradient-from: var(--color-primary); }
-.to-wj-green { --tw-gradient-to: var(--color-secondary); }
-.to-wj-purple { --tw-gradient-to: var(--color-primary); }
-.border-wj-purple { border-color: var(--color-primary); }
-.border-wj-green { border-color: var(--color-secondary); }
+.from-wj-blue { --tw-gradient-from: var(--color-primary); }
+.to-wj-teal { --tw-gradient-to: var(--color-secondary); }
+.to-wj-blue { --tw-gradient-to: var(--color-primary); }
+.border-wj-blue { border-color: var(--color-primary); }
+.border-wj-teal { border-color: var(--color-secondary); }
 
 /* Smooth scrolling - respect user preferences */
 @media (prefers-reduced-motion: no-preference) {
@@ -64,12 +64,12 @@
 }
 
 /* Glow effects */
-.glow-purple {
-  box-shadow: 0 0 40px rgba(157, 0, 255, 0.3);
+.glow-blue {
+  box-shadow: 0 0 40px rgba(67, 56, 202, 0.3);
 }
 
-.glow-green {
-  box-shadow: 0 0 40px rgba(0, 210, 153, 0.3);
+.glow-teal {
+  box-shadow: 0 0 40px rgba(13, 148, 136, 0.3);
 }
 
 /* Card hover effect */
@@ -112,7 +112,7 @@
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(157, 0, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(67, 56, 202, 0.4);
 }
 
 /* Section divider */
