@@ -1,257 +1,540 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Step from '../components/Step.astro';
-import FAQ from '../components/FAQ.astro';
-import SafetyItem from '../components/SafetyItem.astro';
-import Screenshot from '../components/Screenshot.astro';
+import { Image } from 'astro:assets';
+import mainImg from '../assets/screenshots/wabbajack-main.png';
+import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
 ---
 
-<Layout title="Wabbajack Library Cleaner - Free Up Disk Space">
+<Layout title="Wabbajack Library Cleaner - Free Up Disk Space | Remove Orphaned Mods">
+  
   <!-- Hero Section -->
-  <header class="bg-gradient-to-br from-[#0f172a] to-[#020617] py-20 text-center border-b border-[#334155]">
-    <div class="max-w-6xl mx-auto px-5">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-500 to-emerald-500 bg-clip-text text-transparent">
-        🧹 Wabbajack Library Cleaner
-      </h1>
-      <p class="text-xl md:text-2xl text-slate-400 mb-8">
-        Free up <strong class="text-emerald-500">50-200 GB</strong> of disk space from your Wabbajack downloads
-      </p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-        <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest" 
-           class="inline-block px-7 py-4 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-semibold text-lg transition-all hover:-translate-y-0.5">
-          ⬇️ Download for Windows
-        </a>
-        <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest"
-           class="inline-block px-7 py-4 bg-[#1e293b] hover:border-violet-500 text-white rounded-lg font-semibold text-lg transition-all border-2 border-[#334155]">
-          🐧 Download for Linux
-        </a>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0a0f1f] to-[#020617]"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-wj-purple/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-wj-green/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-32 lg:pb-24">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-wj-purple/10 border border-wj-purple/30 rounded-full text-sm text-wj-purple mb-6">
+            <span class="w-2 h-2 bg-wj-green rounded-full animate-pulse"></span>
+            v2.1.1 — Built with Rust 🦀
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+            <span class="gradient-text">Wabbajack</span>
+            <br />
+            <span class="text-white">Library Cleaner</span>
+          </h1>
+          
+          <p class="text-lg sm:text-xl text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Safely remove <strong class="text-wj-green">orphaned mods</strong> and <strong class="text-wj-green">old versions</strong> from your downloads folder. Free up hundreds of gigabytes without breaking your modlists.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest" 
+               class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-wj-purple to-[#7a00c7] hover:from-[#b833ff] hover:to-wj-purple text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-purple-900/30 hover:shadow-purple-900/50">
+              <svg class="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Download Free
+            </a>
+            
+            <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#da732c] hover:bg-[#e88540] text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-orange-900/30">
+              <img src="/nexus-logo.png" alt="Nexus Mods logo" class="w-6 h-6 object-contain" />
+              Nexus Mods
+            </a>
+          </div>
+          
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
+            <span class="flex items-center gap-2 px-3 py-1.5 bg-[#1e293b] rounded-lg border border-[#334155]">
+              <svg class="w-4 h-4 text-[#0078d4]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+              </svg>
+              Windows
+            </span>
+            <span class="flex items-center gap-2 px-3 py-1.5 bg-[#1e293b] rounded-lg border border-[#334155]">
+              <svg class="w-4 h-4 text-[#FCC624]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.504.587c-.155 0-.311.001-.465.003-.653.014-1.301.065-1.937.174a12 12 0 00-1.883.525C7.607.53 7.02.84 6.47 1.214c-.55.375-1.057.813-1.512 1.308-.454.495-.854 1.042-1.19 1.634-.337.592-.607 1.221-.805 1.873-.198.652-.323 1.32-.375 1.994-.053.675-.033 1.354.058 2.023.091.67.253 1.325.482 1.955.228.629.522 1.229.878 1.79.356.561.771 1.078 1.239 1.544.468.466.985.881 1.546 1.237.562.356 1.161.65 1.79.878.63.229 1.286.39 1.956.482.669.091 1.348.111 2.023.058.674-.052 1.342-.177 1.994-.375.652-.198 1.282-.468 1.873-.805.592-.336 1.14-.736 1.634-1.19.495-.454.933-.962 1.308-1.512.375-.55.684-1.137.925-1.749.242-.612.414-1.244.525-1.883.109-.636.16-1.284.174-1.937.002-.154.003-.31.003-.465 0-.155-.001-.311-.003-.465a12 12 0 00-.174-1.937 12 12 0 00-.525-1.883 12 12 0 00-.925-1.749c-.375-.55-.813-1.057-1.308-1.512-.494-.454-1.042-.854-1.634-1.19-.592-.337-1.221-.607-1.873-.805a12 12 0 00-1.994-.375 12 12 0 00-2.023.058 12 12 0 00-1.955.482 12 12 0 00-1.79.878c-.561.356-1.078.771-1.544 1.239-.466.468-.881.985-1.237 1.546-.356.562-.65 1.161-.878 1.79-.229.63-.39 1.286-.482 1.956-.091.669-.111 1.348-.058 2.023.052.674.177 1.342.375 1.994.198.652.468 1.282.805 1.873.336.592.736 1.14 1.19 1.634.454.495.962.933 1.512 1.308.55.375 1.137.684 1.749.925.612.242 1.244.414 1.883.525.636.109 1.284.16 1.937.174.154.002.31.003.465.003z"/>
+              </svg>
+              Linux
+            </span>
+            <span class="flex items-center gap-2 px-3 py-1.5 bg-[#1e293b] rounded-lg border border-[#334155]">
+              <svg class="w-4 h-4 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              Open Source
+            </span>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-wj-purple/20 to-wj-green/20 rounded-2xl blur-2xl"></div>
+          <div class="relative bg-[#0f172a] rounded-2xl overflow-hidden border border-[#334155] shadow-2xl">
+            <Image src={mainImg} alt="Wabbajack Library Cleaner main interface showing mod cleanup options" class="w-full h-auto" data-zoomable loading="eager" />
+          </div>
+        </div>
       </div>
-      
-      <p class="text-slate-500 text-sm">Version 2.1.0 • Free & Open Source • ~6 MB</p>
     </div>
-  </header>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-[#0f172a] border-y border-[#334155]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">200GB+</div>
+          <div class="text-slate-400 text-sm">Average Space Recovered</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">~6MB</div>
+          <div class="text-slate-400 text-sm">Lightweight App Size</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">100%</div>
+          <div class="text-slate-400 text-sm">Free & Open Source</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Problem Section -->
-  <section class="py-20 bg-[#0f172a]">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-4">😰 The Problem</h2>
-      <p class="text-center text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-        If you've been using Wabbajack for a while, your downloads folder is probably <strong class="text-white">huge</strong>.
-      </p>
+  <section id="problem" class="py-16 lg:py-24 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-red-500/10 text-red-400 text-sm font-medium rounded-full mb-4">The Problem</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Your Disk Space Is Disappearing</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Wabbajack preserves every file to ensure reliability — but this leads to massive accumulation of unused files over time.
+        </p>
+      </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card 
-          icon="📦" 
-          title="Orphaned Mods" 
-          description="Every time you switch modlists, old mods stay behind. You tried Licentia, then switched to Nolvus? Those 80 GB of Licentia mods are still sitting there."
-        />
-        <Card 
-          icon="📚" 
-          title="Old Versions" 
-          description="Same mod, 5 different versions. SKSE updated? You have 5 old versions taking up space. Wabbajack keeps them all 'just in case'."
-        />
-        <Card 
-          icon="💾" 
-          title="Hundreds of GBs" 
-          description="A typical Wabbajack user has 200-500 GB in their downloads folder. Half of that is usually waste."
-        />
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <article class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-red-500/50 transition-all duration-300 card-hover">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-2xl group-hover:bg-red-500/10 transition-colors"></div>
+          <div class="relative">
+            <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/20 transition-colors">
+              <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Orphaned Mods</h3>
+            <p class="text-slate-400 leading-relaxed">When you delete a modlist, its downloaded archives stay behind. Tried Lorerim, Nordic Souls, or other lists? Those files remain forever.</p>
+          </div>
+        </article>
+        
+        <article class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-orange-500/50 transition-all duration-300 card-hover">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/10 transition-colors"></div>
+          <div class="relative">
+            <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors">
+              <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Old Versions</h3>
+            <p class="text-slate-400 leading-relaxed">Mods update frequently. Wabbajack keeps every version for rollback. You might have 5-10 copies of the same mod sitting there.</p>
+          </div>
+        </article>
+        
+        <article class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-yellow-500/50 transition-all duration-300 card-hover">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/5 rounded-full blur-2xl group-hover:bg-yellow-500/10 transition-colors"></div>
+          <div class="relative">
+            <div class="w-14 h-14 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/20 transition-colors">
+              <svg class="w-7 h-7 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Massive Bloat</h3>
+            <p class="text-slate-400 leading-relaxed">Active modders commonly accumulate 200GB+ of redundant files. Some users report 500GB or more just in unused downloads.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Solution Section -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-4">✨ The Solution</h2>
-      <p class="text-center text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-        Wabbajack Library Cleaner scans your downloads folder and safely removes what you don't need.
-      </p>
+  <section id="features" class="py-16 lg:py-24 bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-wj-green/10 text-wj-green text-sm font-medium rounded-full mb-4">The Solution</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Clean Your Library Safely</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Wabbajack Library Cleaner scans your downloads and lets you safely remove what you don't need.</p>
+      </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center p-6">
-          <span class="text-4xl block mb-4">🔍</span>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-purple/30 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-5 bg-wj-purple/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-purple/20 group-hover:scale-110 transition-all duration-300">
+            <svg class="w-8 h-8 text-wj-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold mb-2">Smart Detection</h3>
-          <p class="text-slate-400 text-sm">Reads your .wabbajack files to understand exactly which mods your current modlists actually need.</p>
+          <p class="text-slate-400 text-sm">Reads .wabbajack files to understand which mods your modlists actually need.</p>
         </div>
-        <div class="text-center p-6">
-          <span class="text-4xl block mb-4">🗑️</span>
+        
+        <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-purple/30 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-5 bg-wj-purple/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-purple/20 group-hover:scale-110 transition-all duration-300">
+            <svg class="w-8 h-8 text-wj-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold mb-2">Orphan Cleanup</h3>
-          <p class="text-slate-400 text-sm">Finds mods that aren't used by any of your active modlists and lets you remove them.</p>
+          <p class="text-slate-400 text-sm">Find and remove mods not used by any of your active modlists.</p>
         </div>
-        <div class="text-center p-6">
-          <span class="text-4xl block mb-4">📅</span>
+        
+        <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-purple/30 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-5 bg-wj-purple/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-purple/20 group-hover:scale-110 transition-all duration-300">
+            <svg class="w-8 h-8 text-wj-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold mb-2">Version Cleanup</h3>
-          <p class="text-slate-400 text-sm">Keeps the newest version of each mod, removes all the old duplicates.</p>
+          <p class="text-slate-400 text-sm">Keep newest version of each mod, remove all the old duplicates.</p>
         </div>
-        <div class="text-center p-6">
-          <span class="text-4xl block mb-4">💾</span>
+        
+        <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-purple/30 transition-all duration-300">
+          <div class="w-16 h-16 mx-auto mb-5 bg-wj-green/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-green/20 group-hover:scale-110 transition-all duration-300">
+            <svg class="w-8 h-8 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
           <h3 class="text-lg font-semibold mb-2">Safe Deletion</h3>
-          <p class="text-slate-400 text-sm">Files are moved to a backup folder, not permanently deleted. Changed your mind? Just restore them.</p>
+          <p class="text-slate-400 text-sm">Files move to backup folder, not permanently deleted. Easily restorable.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section class="py-20 bg-[#0f172a]">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-12">🚀 How It Works</h2>
+  <section id="how-it-works" class="py-16 lg:py-24 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-wj-purple/10 text-wj-purple text-sm font-medium rounded-full mb-4">Quick & Easy</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Four simple steps to reclaim your disk space. No technical knowledge required.</p>
+      </div>
       
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <Step 
-          number={1} 
-          title="Select Wabbajack Folder" 
-          description="Point to where Wabbajack.exe is installed. The app will find all your downloaded modlists automatically."
-        />
-        <Step 
-          number={2} 
-          title="Select Downloads Folder" 
-          description="Point to your mod downloads folder (the big one eating your disk space)."
-        />
-        <Step 
-          number={3} 
-          title="Choose Your Modlists" 
-          description="Check the modlists you're actively using. Everything else becomes fair game for cleanup."
-        />
-        <Step 
-          number={4} 
-          title="Scan & Clean" 
-          description="Hit scan to see what can be removed. Happy with the results? Hit clean and watch the space come back."
-        />
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative">
+          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-purple to-transparent -translate-x-8"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-wj-purple to-[#7a00c7] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-purple-900/30">1</div>
+            <h3 class="text-lg font-semibold mb-3">Select Wabbajack Folder</h3>
+            <p class="text-slate-400 text-sm">Point to where Wabbajack.exe is installed. Modlists are detected automatically.</p>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-purple to-transparent -translate-x-8"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-wj-purple to-[#7a00c7] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-purple-900/30">2</div>
+            <h3 class="text-lg font-semibold mb-3">Select Downloads Folder</h3>
+            <p class="text-slate-400 text-sm">Point to your mod downloads folder — the big one eating your disk space.</p>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-purple to-transparent -translate-x-8"></div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-wj-purple to-[#7a00c7] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-purple-900/30">3</div>
+            <h3 class="text-lg font-semibold mb-3">Choose Your Modlists</h3>
+            <p class="text-slate-400 text-sm">Check the modlists you're actively using. Everything else becomes fair game.</p>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-wj-green to-[#00a87a] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-green-900/30">4</div>
+          <h3 class="text-lg font-semibold mb-3">Scan & Clean</h3>
+          <p class="text-slate-400 text-sm">Hit scan to preview. Happy with results? Hit clean and watch space come back.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Screenshots -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-12">📸 Screenshots</h2>
+  <section id="screenshots" class="py-16 lg:py-24 bg-[#0f172a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-wj-purple/10 text-wj-purple text-sm font-medium rounded-full mb-4">User Interface</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Modern & Intuitive Design</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">A clean, dark-themed interface built with modern GUI framework. Easy to use, hard to make mistakes.</p>
+      </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Screenshot 
-          src="/screenshots/main-interface.png" 
-          alt="Main Interface - Clean and simple UI" 
-          caption="Clean, step-by-step interface"
-        />
-        <Screenshot 
-          src="/screenshots/orphaned-scan.png" 
-          alt="Orphaned Mods Scan Results" 
-          caption="Orphaned mods scan results"
-        />
-        <Screenshot 
-          src="/screenshots/old-versions-scan.png" 
-          alt="Old Versions Detection" 
-          caption="Old versions detection"
-        />
+      <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <figure class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-wj-purple/20 to-wj-green/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-purple/30 transition-colors">
+            <Image src={mainImg} alt="Wabbajack Library Cleaner main interface showing mod cleanup options" class="w-full h-auto" data-zoomable loading="lazy" />
+          </div>
+          <figcaption class="text-center text-slate-400 text-sm mt-4">Main Interface • Click to enlarge</figcaption>
+        </figure>
+
+        <figure class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-wj-green/20 to-wj-purple/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-purple/30 transition-colors">
+            <Image src={aboutComboImg} alt="Wabbajack Library Cleaner about dialog and version info" class="w-full h-auto" data-zoomable loading="lazy" />
+          </div>
+          <figcaption class="text-center text-slate-400 text-sm mt-4">About Dialog & Options • Click to enlarge</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- Safety Section -->
-  <section class="py-20 bg-[#0f172a]">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-12">🛡️ Safety First</h2>
-      
-      <div class="max-w-3xl mx-auto space-y-4">
-        <SafetyItem 
-          icon="✓" 
-          title="Backup by Default" 
-          description="Deleted files go to a timestamped backup folder. Nothing is permanently erased."
-        />
-        <SafetyItem 
-          icon="✓" 
-          title="Smart Version Detection" 
-          description="Won't delete if it detects a patch file that needs the main file, or same-version files with different content."
-        />
-        <SafetyItem 
-          icon="✓" 
-          title="Scan Before Delete" 
-          description="Always preview what will be deleted. See exact file counts and sizes before committing."
-        />
-        <SafetyItem 
-          icon="✓" 
-          title="Open Source" 
-          description="The code is on GitHub. See exactly what it does. No hidden behavior."
-        />
+  <section id="safety" class="py-16 lg:py-24 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="inline-block px-4 py-1.5 bg-wj-green/10 text-wj-green text-sm font-medium rounded-full mb-4">Your Data Is Safe</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6">Safety First Approach</h2>
+          <p class="text-slate-400 text-lg mb-8">We understand how important your mod collection is. That's why we built multiple safety features to prevent any accidental data loss.</p>
+          
+          <div class="space-y-4">
+            <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
+              <div class="w-10 h-10 bg-wj-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Backup by Default</h3>
+                <p class="text-slate-400 text-sm">Files go to a timestamped backup folder. Nothing is permanently erased unless you choose to.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
+              <div class="w-10 h-10 bg-wj-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Smart Version Detection</h3>
+                <p class="text-slate-400 text-sm">Won't delete files if it detects patches that need the main file, or same-version files with different content.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
+              <div class="w-10 h-10 bg-wj-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">Scan Before Delete</h3>
+                <p class="text-slate-400 text-sm">Always preview what will be deleted. See exact file counts and sizes before committing.</p>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
+              <div class="w-10 h-10 bg-wj-green/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1">100% Open Source</h3>
+                <p class="text-slate-400 text-sm">The code is on GitHub. See exactly what it does. No telemetry, no hidden behavior.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative hidden lg:block">
+          <div class="absolute inset-0 bg-gradient-to-r from-wj-green/10 to-wj-purple/10 rounded-3xl blur-3xl"></div>
+          <div class="relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155]">
+            <div class="text-center">
+              <div class="w-24 h-24 bg-wj-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-12 h-12 text-wj-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Protected by Design</h3>
+              <p class="text-slate-400 mb-6">Your mods are backed up to:</p>
+              <code class="block bg-[#020617] px-4 py-3 rounded-lg text-sm font-mono text-wj-green break-all">F:\Wabbajack\WLC_Deleted\2025-01-15_14-30-00\</code>
+              <p class="text-slate-500 text-xs mt-4">Timestamped folders for easy recovery</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-12">❓ FAQ</h2>
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 lg:py-24 bg-[#0f172a]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-wj-purple/10 text-wj-purple text-sm font-medium rounded-full mb-4">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <p class="text-slate-400 text-lg">Got questions? We've got answers.</p>
+      </div>
       
-      <div class="max-w-3xl mx-auto">
-        <FAQ title="Will this break my modlists?">
-          <p>No. The orphan cleanup only removes mods that aren't used by any of your selected modlists. If you select all your active modlists, everything they need stays. The version cleanup is more aggressive - some older modlists might need specific old versions, so be careful with that one.</p>
-        </FAQ>
+      <div class="space-y-4">
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>Will this break my modlists?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>No. The orphan cleanup only removes mods not used by any of your selected modlists. If you select all your active modlists, everything they need stays.</p>
+          </div>
+        </details>
         
-        <FAQ title="How much space can I save?">
-          <p>It depends on how many modlists you've tried. Users typically recover 50-200 GB. If you've been modding for years, it could be even more.</p>
-        </FAQ>
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>How much space can I save?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>Users typically recover 50-200 GB. If you've been modding for years, it could be 500GB or more.</p>
+          </div>
+        </details>
         
-        <FAQ title="What if I want to try an old modlist again?">
-          <p>Wabbajack will just re-download what it needs. The whole point of Wabbajack is that it handles downloads automatically. Keeping old mods "just in case" is usually not necessary.</p>
-        </FAQ>
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>What if I want to try an old modlist again?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>Wabbajack will just re-download what it needs. Keeping old mods "just in case" is usually not necessary.</p>
+          </div>
+        </details>
         
-        <FAQ title="Is it safe?">
-          <p>Yes. Files are moved to a backup folder by default. If something goes wrong, you can restore them. The app also has multiple safety checks to avoid deleting files that might be needed.</p>
-        </FAQ>
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>Does it work on Linux / Steam Deck?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>Yes! Native Linux binaries are available. Perfect for Steam Deck users running Wabbajack through Proton.</p>
+          </div>
+        </details>
         
-        <FAQ title="Does it work on Linux?">
-          <p>Yes! Native Linux binaries are available. Perfect for Steam Deck users running Wabbajack through Proton.</p>
-        </FAQ>
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>Where does it move deleted files?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_Deleted</code> inside your downloads folder with a timestamp subfolder.</p>
+          </div>
+        </details>
         
-        <FAQ title="Where does it move deleted files?">
-          <p>To a folder called <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_Deleted</code> inside your downloads folder, with a timestamp subfolder. Example: <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">F:\Wabbajack\WLC_Deleted\2025-01-15_14-30-00\</code></p>
-        </FAQ>
+        <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+          <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
+            <span>Is it really free?</span>
+            <svg class="w-5 h-5 text-wj-purple transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </summary>
+          <div class="px-6 pb-5 text-slate-400">
+            <p>Yes, 100% free and open source under GPL-3.0 license. No ads, no premium features, no data collection.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- Download Section -->
-  <section class="py-20 bg-[#0f172a]">
-    <div class="max-w-6xl mx-auto px-5">
-      <h2 class="text-3xl font-bold text-center mb-12">⬇️ Download</h2>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-8">
-        <div class="bg-[#1e293b] border border-[#334155] rounded-xl p-8 text-center">
-          <h3 class="text-2xl mb-2">🪟 Windows</h3>
-          <p class="text-slate-400 mb-5">Windows 10/11 (64-bit)</p>
-          <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner.exe"
-             class="inline-block px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-semibold transition-colors">
-            Download .exe
-          </a>
-        </div>
-        <div class="bg-[#1e293b] border border-[#334155] rounded-xl p-8 text-center">
-          <h3 class="text-2xl mb-2">🐧 Linux</h3>
-          <p class="text-slate-400 mb-5">Any modern distro (64-bit)</p>
-          <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner-linux"
-             class="inline-block px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-lg font-semibold transition-colors">
-            Download Binary
-          </a>
-        </div>
+  <section id="download" class="py-16 lg:py-24 bg-[#020617]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-wj-green/10 text-wj-green text-sm font-medium rounded-full mb-4">Get Started</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Download Wabbajack Library Cleaner</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Choose your platform and start cleaning. It's free, fast, and safe.</p>
       </div>
       
-      <p class="text-center">
-        <a href="https://github.com/Yakrel/wabbajack-library-cleaner" class="text-slate-400 hover:text-violet-500 transition-colors">
-          📂 View Source on GitHub
+      <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
+        <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner.exe"
+           class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-[#0078d4]/50 transition-all duration-300 card-hover text-center">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#0078d4]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative">
+            <div class="text-5xl mb-4">🪟</div>
+            <h3 class="text-2xl font-bold mb-2">Windows</h3>
+            <p class="text-slate-400 mb-6">Windows 10/11 (64-bit)</p>
+            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#0078d4] hover:bg-[#106ebe] text-white rounded-xl font-semibold transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Download .exe
+            </span>
+          </div>
         </a>
-      </p>
+        
+        <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner-linux"
+           class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-[#FCC624]/50 transition-all duration-300 card-hover text-center">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#FCC624]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative">
+            <div class="text-5xl mb-4">🐧</div>
+            <h3 class="text-2xl font-bold mb-2">Linux</h3>
+            <p class="text-slate-400 mb-6">Any modern distro (64-bit)</p>
+            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#FCC624] hover:bg-[#e5b320] text-black rounded-xl font-semibold transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Download Binary
+            </span>
+          </div>
+        </a>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="https://github.com/Yakrel/wabbajack-library-cleaner" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+          </svg>
+          View Source on GitHub
+        </a>
+        <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-[#da732c] transition-colors">
+          <img src="/nexus-logo.png" alt="" class="w-5 h-5 object-contain opacity-70" aria-hidden="true" />
+          View on Nexus Mods
+        </a>
+        <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-wj-purple transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+          </svg>
+          All Releases
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#020617] border-t border-[#334155] py-10 text-center">
-    <div class="max-w-6xl mx-auto px-5">
-      <p class="text-slate-400 mb-2">Made with ❤️ by <a href="https://github.com/Yakrel" class="text-slate-400 hover:text-violet-500">Berkay Yetgin</a></p>
-      <p class="text-slate-400">
-        Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html" class="text-slate-400 hover:text-violet-500">GPL-3.0</a> • 
-        <a href="https://github.com/Yakrel/wabbajack-library-cleaner" class="text-slate-400 hover:text-violet-500">GitHub</a>
-      </p>
+  <footer class="bg-[#0f172a] border-t border-[#334155] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🧹</span>
+          <span class="font-bold gradient-text">Wabbajack Library Cleaner</span>
+        </div>
+        
+        <nav class="flex flex-wrap justify-center gap-6 text-sm" aria-label="Footer navigation">
+          <a href="https://github.com/Yakrel/wabbajack-library-cleaner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+          <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#da732c] transition-colors">Nexus Mods</a>
+          <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GPL-3.0 License</a>
+        </nav>
+        
+        <div class="text-sm text-slate-500">
+          Made with <span class="text-red-500">❤️</span> by <a href="https://github.com/Yakrel" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-wj-purple transition-colors">Berkay Yetgin</a>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-[#334155] text-center text-sm text-slate-500">
+        <p>Wabbajack Library Cleaner is not affiliated with the official Wabbajack project.</p>
+      </div>
     </div>
   </footer>
 </Layout>
