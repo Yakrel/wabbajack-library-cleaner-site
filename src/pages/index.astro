@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import mainImg from '../assets/screenshots/wabbajack-main.png';
-import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
+import mainImg from '../assets/screenshots/cleaning-in-progress.png';
+import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
 ---
 
 <Layout title="Wabbajack Library Cleaner - Free Up Disk Space | Remove Orphaned Mods">
@@ -18,7 +18,7 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
         <div class="text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-wj-blue/10 border border-wj-blue/30 rounded-full text-sm text-wj-blue mb-4">
             <span class="w-2 h-2 bg-wj-teal rounded-full animate-pulse"></span>
-            v2.1.1 — Built with Rust 🦀
+            v2.1.2 — Built with Rust 🦀
           </div>
           
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
@@ -201,7 +201,7 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
             </svg>
           </div>
           <h3 class="text-lg font-semibold mb-2">Safe Deletion</h3>
-          <p class="text-slate-400 text-sm">Files move to backup folder, not permanently deleted. Easily restorable.</p>
+          <p class="text-slate-400 text-sm">Files move to WLC_RecycleBin folder, not permanently deleted. Easily restorable.</p>
         </div>
       </div>
     </div>
@@ -262,21 +262,21 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
         <p class="text-slate-400 text-lg max-w-2xl mx-auto">A clean, dark-themed interface built with modern GUI framework. Easy to use, hard to make mistakes.</p>
       </div>
       
-      <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <figure class="relative group">
           <div class="absolute -inset-2 bg-gradient-to-r from-wj-blue/20 to-wj-teal/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
-            <Image src={mainImg} alt="Wabbajack Library Cleaner main interface showing mod cleanup options" class="w-full h-auto" data-zoomable loading="lazy" />
+            <Image src={mainImg} alt="Wabbajack Library Cleaner showing real-time progress bar during cleanup" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
-          <figcaption class="text-center text-slate-400 text-sm mt-4">Main Interface • Click to enlarge</figcaption>
+          <figcaption class="text-center text-slate-400 text-sm mt-4">Cleanup In Progress • Click to enlarge</figcaption>
         </figure>
 
         <figure class="relative group">
           <div class="absolute -inset-2 bg-gradient-to-r from-wj-teal/20 to-wj-blue/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
-            <Image src={aboutComboImg} alt="Wabbajack Library Cleaner about dialog and version info" class="w-full h-auto" data-zoomable loading="lazy" />
+            <Image src={cleanupCompleteImg} alt="Wabbajack Library Cleaner after cleanup — 0 orphaned files remaining, completion message in log" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
-          <figcaption class="text-center text-slate-400 text-sm mt-4">About Dialog & Options • Click to enlarge</figcaption>
+          <figcaption class="text-center text-slate-400 text-sm mt-4">Cleanup Complete • Click to enlarge</figcaption>
         </figure>
       </div>
     </div>
@@ -299,8 +299,8 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1">Backup by Default</h3>
-                <p class="text-slate-400 text-sm">Files go to a timestamped backup folder. Nothing is permanently erased unless you choose to.</p>
+                <h3 class="font-semibold mb-1">Move, Don't Delete</h3>
+                <p class="text-slate-400 text-sm">Files move to a timestamped WLC_RecycleBin folder instead of being permanently deleted. Review, restore, or wipe it when you're ready.</p>
               </div>
             </div>
             
@@ -353,8 +353,8 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
                 </svg>
               </div>
               <h3 class="text-2xl font-bold mb-2">Protected by Design</h3>
-              <p class="text-slate-400 mb-6">Your mods are backed up to:</p>
-              <code class="block bg-[#020617] px-4 py-3 rounded-lg text-sm font-mono text-wj-teal break-all">F:\Wabbajack\WLC_Deleted\2025-01-15_14-30-00\</code>
+              <p class="text-slate-400 mb-6">Your mods are moved to:</p>
+              <code class="block bg-[#020617] px-4 py-3 rounded-lg text-sm font-mono text-wj-teal break-all">F:\Wabbajack\WLC_RecycleBin\2026-03-01_14-30-00\</code>
               <p class="text-slate-500 text-xs mt-4">Timestamped folders for easy recovery</p>
             </div>
           </div>
@@ -429,7 +429,7 @@ import aboutComboImg from '../assets/screenshots/wabbajack-about-combo.png';
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_Deleted</code> inside your downloads folder with a timestamp subfolder.</p>
+            <p>To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_RecycleBin</code> inside your downloads folder with a timestamp subfolder.</p>
           </div>
         </details>
         
