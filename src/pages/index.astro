@@ -7,6 +7,12 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
 
 <Layout title="Wabbajack Library Cleaner - Free Up Disk Space | Remove Orphaned Mods">
   
+  <!-- Language Switcher -->
+  <div class="fixed top-4 right-4 z-50 flex gap-2">
+    <button id="btn-en" class="px-3 py-1.5 bg-[#1e293b] border border-[#334155] rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-colors">EN</button>
+    <button id="btn-tr" class="px-3 py-1.5 bg-[#1e293b] border border-[#334155] rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-colors">TR</button>
+  </div>
+
   <!-- Hero Section -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0a0f1f] to-[#020617]"></div>
@@ -18,16 +24,16 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
         <div class="text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-wj-blue/10 border border-wj-blue/30 rounded-full text-sm text-wj-blue mb-4">
             <span class="w-2 h-2 bg-wj-teal rounded-full animate-pulse"></span>
-            v2.1.2 — Built with Rust 🦀
+            v2.1.2 — <span data-i18n="hero_badge">Built with Rust 🦀</span>
           </div>
           
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
             <span class="gradient-text">Wabbajack</span>
             <br />
-            <span class="text-white">Library Cleaner</span>
+            <span class="text-white" data-i18n="hero_title">Library Cleaner</span>
           </h1>
           
-          <p class="text-lg sm:text-xl text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+          <p class="text-lg sm:text-xl text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0" data-i18n="hero_desc">
             Safely remove <strong class="text-wj-teal">orphaned mods</strong> and <strong class="text-wj-teal">old versions</strong> from your downloads folder. Free up hundreds of gigabytes without breaking your modlists.
           </p>
           
@@ -37,7 +43,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <svg class="w-5 h-5 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
               </svg>
-              Download Free
+              <span data-i18n="btn_download">Download Free</span>
             </a>
             
             <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" 
@@ -65,7 +71,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <svg class="w-4 h-4 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
               </svg>
-              Open Source
+              <span data-i18n="hero_os">Open Source</span>
             </span>
           </div>
         </div>
@@ -86,15 +92,15 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
       <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
         <div class="text-center">
           <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">200GB+</div>
-          <div class="text-slate-400 text-sm">Average Space Recovered</div>
+          <div class="text-slate-400 text-sm" data-i18n="stats_space">Average Space Recovered</div>
         </div>
         <div class="text-center">
           <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">~6MB</div>
-          <div class="text-slate-400 text-sm">Lightweight App Size</div>
+          <div class="text-slate-400 text-sm" data-i18n="stats_size">Lightweight App Size</div>
         </div>
         <div class="text-center">
           <div class="text-3xl sm:text-4xl font-bold gradient-text mb-2">100%</div>
-          <div class="text-slate-400 text-sm">Free & Open Source</div>
+          <div class="text-slate-400 text-sm" data-i18n="stats_free">Free & Open Source</div>
         </div>
       </div>
     </div>
@@ -104,9 +110,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
   <section id="problem" class="py-16 lg:py-20 bg-[#020617]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-red-500/10 text-red-400 text-sm font-medium rounded-full mb-4">The Problem</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Your Disk Space Is Disappearing</h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-red-500/10 text-red-400 text-sm font-medium rounded-full mb-4" data-i18n="prob_badge">The Problem</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="prob_title">Your Disk Space Is Disappearing</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="prob_desc">
           Wabbajack keeps your downloads to make updates faster, but this leads to massive accumulation of orphaned files and obsolete versions over time.
         </p>
       </div>
@@ -120,8 +126,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-white">Orphaned Mods</h3>
-            <p class="text-slate-400 leading-relaxed">When you delete a modlist, its downloaded archives stay behind. Tried Lorerim, Nordic Souls, or other lists? Those files remain forever.</p>
+            <h3 class="text-xl font-semibold mb-3 text-white" data-i18n="prob_item1_title">Orphaned Mods</h3>
+            <p class="text-slate-400 leading-relaxed" data-i18n="prob_item1_desc">When you delete a modlist, its downloaded archives stay behind. Tried Lorerim, Nordic Souls, or other lists? Those files remain forever.</p>
           </div>
         </article>
         
@@ -133,8 +139,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-white">Old Versions</h3>
-            <p class="text-slate-400 leading-relaxed">Mods update frequently. Wabbajack keeps every version for rollback. You might have 5-10 copies of the same mod sitting there.</p>
+            <h3 class="text-xl font-semibold mb-3 text-white" data-i18n="prob_item2_title">Old Versions</h3>
+            <p class="text-slate-400 leading-relaxed" data-i18n="prob_item2_desc">Mods update frequently. Wabbajack keeps every version for rollback. You might have 5-10 copies of the same mod sitting there.</p>
           </div>
         </article>
         
@@ -146,8 +152,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3 text-white">Massive Bloat</h3>
-            <p class="text-slate-400 leading-relaxed">Active modders commonly accumulate 200GB+ of redundant files. Some users report 500GB or more just in unused downloads.</p>
+            <h3 class="text-xl font-semibold mb-3 text-white" data-i18n="prob_item3_title">Massive Bloat</h3>
+            <p class="text-slate-400 leading-relaxed" data-i18n="prob_item3_desc">Active modders commonly accumulate 200GB+ of redundant files. Some users report 500GB or more just in unused downloads.</p>
           </div>
         </article>
       </div>
@@ -158,9 +164,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
   <section id="features" class="py-16 lg:py-20 bg-[#0f172a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4">The Solution</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Clean Your Library Safely</h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Wabbajack Library Cleaner scans your downloads and lets you safely remove what you don't need.</p>
+        <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4" data-i18n="sol_badge">The Solution</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="sol_title">Clean Your Library Safely</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="sol_desc">Wabbajack Library Cleaner scans your downloads and lets you safely remove what you don't need.</p>
       </div>
       
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -170,8 +176,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2">Smart Detection</h3>
-          <p class="text-slate-400 text-sm">Reads .wabbajack files to understand which mods your modlists actually need.</p>
+          <h3 class="text-lg font-semibold mb-2" data-i18n="sol_item1_title">Smart Detection</h3>
+          <p class="text-slate-400 text-sm" data-i18n="sol_item1_desc">Reads .wabbajack files to understand which mods your modlists actually need.</p>
         </div>
         
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
@@ -180,8 +186,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2">Orphan Cleanup</h3>
-          <p class="text-slate-400 text-sm">Find and remove mods not used by any of your active modlists.</p>
+          <h3 class="text-lg font-semibold mb-2" data-i18n="sol_item2_title">Orphan Cleanup</h3>
+          <p class="text-slate-400 text-sm" data-i18n="sol_item2_desc">Find and remove mods not used by any of your active modlists.</p>
         </div>
         
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
@@ -190,8 +196,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2">Version Cleanup</h3>
-          <p class="text-slate-400 text-sm">Keep newest version of each mod, remove all the old duplicates.</p>
+          <h3 class="text-lg font-semibold mb-2" data-i18n="sol_item3_title">Version Cleanup</h3>
+          <p class="text-slate-400 text-sm" data-i18n="sol_item3_desc">Keep newest version of each mod, remove all the old duplicates.</p>
         </div>
         
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
@@ -200,8 +206,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
             </svg>
           </div>
-          <h3 class="text-lg font-semibold mb-2">Safe Deletion</h3>
-          <p class="text-slate-400 text-sm">Files move to WLC_RecycleBin folder, not permanently deleted. Easily restorable.</p>
+          <h3 class="text-lg font-semibold mb-2" data-i18n="sol_item4_title">Safe Deletion</h3>
+          <p class="text-slate-400 text-sm" data-i18n="sol_item4_desc">Files move to WLC_RecycleBin folder, not permanently deleted. Easily restorable.</p>
         </div>
       </div>
     </div>
@@ -211,9 +217,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
   <section id="how-it-works" class="py-16 lg:py-20 bg-[#020617]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4">Quick & Easy</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Four simple steps to reclaim your disk space. No technical knowledge required.</p>
+        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4" data-i18n="how_badge">Quick & Easy</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="how_title">How It Works</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="how_desc">Four simple steps to reclaim your disk space. No technical knowledge required.</p>
       </div>
       
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -221,8 +227,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
           <div class="text-center">
             <div class="w-16 h-16 bg-gradient-to-br from-wj-blue to-[#3730a3] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-indigo-900/30">1</div>
-            <h3 class="text-lg font-semibold mb-3">Select Wabbajack Folder</h3>
-            <p class="text-slate-400 text-sm">Point to where Wabbajack.exe is installed. Modlists are detected automatically.</p>
+            <h3 class="text-lg font-semibold mb-3" data-i18n="how_item1_title">Select Wabbajack Folder</h3>
+            <p class="text-slate-400 text-sm" data-i18n="how_item1_desc">Point to where Wabbajack.exe is installed. Modlists are detected automatically.</p>
           </div>
         </div>
         
@@ -230,8 +236,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
           <div class="text-center">
             <div class="w-16 h-16 bg-gradient-to-br from-wj-blue to-[#3730a3] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-indigo-900/30">2</div>
-            <h3 class="text-lg font-semibold mb-3">Select Downloads Folder</h3>
-            <p class="text-slate-400 text-sm">Point to your mod downloads folder — the big one eating your disk space.</p>
+            <h3 class="text-lg font-semibold mb-3" data-i18n="how_item2_title">Select Downloads Folder</h3>
+            <p class="text-slate-400 text-sm" data-i18n="how_item2_desc">Point to your mod downloads folder — the big one eating your disk space.</p>
           </div>
         </div>
         
@@ -239,15 +245,15 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
           <div class="text-center">
             <div class="w-16 h-16 bg-gradient-to-br from-wj-blue to-[#3730a3] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-indigo-900/30">3</div>
-            <h3 class="text-lg font-semibold mb-3">Choose Your Modlists</h3>
-            <p class="text-slate-400 text-sm">Check the modlists you're actively using. Everything else becomes fair game.</p>
+            <h3 class="text-lg font-semibold mb-3" data-i18n="how_item3_title">Choose Your Modlists</h3>
+            <p class="text-slate-400 text-sm" data-i18n="how_item3_desc">Check the modlists you're actively using. Everything else becomes fair game.</p>
           </div>
         </div>
         
         <div class="text-center">
           <div class="w-16 h-16 bg-gradient-to-br from-wj-teal to-[#0f766e] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-teal-900/30">4</div>
-          <h3 class="text-lg font-semibold mb-3">Scan & Clean</h3>
-          <p class="text-slate-400 text-sm">Hit scan to preview. Happy with results? Hit clean and watch space come back.</p>
+          <h3 class="text-lg font-semibold mb-3" data-i18n="how_item4_title">Scan & Clean</h3>
+          <p class="text-slate-400 text-sm" data-i18n="how_item4_desc">Hit scan to preview. Happy with results? Hit clean and watch space come back.</p>
         </div>
       </div>
     </div>
@@ -257,9 +263,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
   <section id="screenshots" class="py-16 lg:py-20 bg-[#0f172a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4">User Interface</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Modern & Intuitive Design</h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">A clean, dark-themed interface built with modern GUI framework. Easy to use, hard to make mistakes.</p>
+        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4" data-i18n="img_badge">User Interface</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="img_title">Modern & Intuitive Design</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="img_desc">A clean, dark-themed interface built with modern GUI framework. Easy to use, hard to make mistakes.</p>
       </div>
       
         <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -268,7 +274,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
             <Image src={mainImg} alt="Wabbajack Library Cleaner showing real-time progress bar during cleanup" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
-          <figcaption class="text-center text-slate-400 text-sm mt-4">Cleanup In Progress • Click to enlarge</figcaption>
+          <figcaption class="text-center text-slate-400 text-sm mt-4" data-i18n="img_cap1">Cleanup In Progress • Click to enlarge</figcaption>
         </figure>
 
         <figure class="relative group">
@@ -276,7 +282,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
             <Image src={cleanupCompleteImg} alt="Wabbajack Library Cleaner after cleanup — 0 orphaned files remaining, completion message in log" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
-          <figcaption class="text-center text-slate-400 text-sm mt-4">Cleanup Complete • Click to enlarge</figcaption>
+          <figcaption class="text-center text-slate-400 text-sm mt-4" data-i18n="img_cap2">Cleanup Complete • Click to enlarge</figcaption>
         </figure>
       </div>
     </div>
@@ -287,9 +293,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4">Your Data Is Safe</span>
-          <h2 class="text-3xl sm:text-4xl font-bold mb-6">Safety First Approach</h2>
-          <p class="text-slate-400 text-lg mb-8">We understand how important your mod collection is. That's why we built multiple safety features to prevent any accidental data loss.</p>
+          <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4" data-i18n="safe_badge">Your Data Is Safe</span>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6" data-i18n="safe_title">Safety First Approach</h2>
+          <p class="text-slate-400 text-lg mb-8" data-i18n="safe_desc">We understand how important your mod collection is. That's why we built multiple safety features to prevent any accidental data loss.</p>
           
           <div class="space-y-4">
             <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
@@ -299,8 +305,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1">Move, Don't Delete</h3>
-                <p class="text-slate-400 text-sm">Files move to a timestamped WLC_RecycleBin folder instead of being permanently deleted. Review, restore, or wipe it when you're ready.</p>
+                <h3 class="font-semibold mb-1" data-i18n="safe_item1_title">Move, Don't Delete</h3>
+                <p class="text-slate-400 text-sm" data-i18n="safe_item1_desc">Files move to a timestamped WLC_RecycleBin folder instead of being permanently deleted. Review, restore, or wipe it when you're ready.</p>
               </div>
             </div>
             
@@ -311,8 +317,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1">Smart Version Detection</h3>
-                <p class="text-slate-400 text-sm">Won't delete files if it detects patches that need the main file, or same-version files with different content.</p>
+                <h3 class="font-semibold mb-1" data-i18n="safe_item2_title">Smart Version Detection</h3>
+                <p class="text-slate-400 text-sm" data-i18n="safe_item2_desc">Won't delete files if it detects patches that need the main file, or same-version files with different content.</p>
               </div>
             </div>
             
@@ -324,8 +330,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1">Scan Before Delete</h3>
-                <p class="text-slate-400 text-sm">Always preview what will be deleted. See exact file counts and sizes before committing.</p>
+                <h3 class="font-semibold mb-1" data-i18n="safe_item3_title">Scan Before Delete</h3>
+                <p class="text-slate-400 text-sm" data-i18n="safe_item3_desc">Always preview what will be deleted. See exact file counts and sizes before committing.</p>
               </div>
             </div>
             
@@ -336,8 +342,8 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold mb-1">100% Open Source</h3>
-                <p class="text-slate-400 text-sm">The code is on GitHub. See exactly what it does. No telemetry, no hidden behavior.</p>
+                <h3 class="font-semibold mb-1" data-i18n="safe_item4_title">100% Open Source</h3>
+                <p class="text-slate-400 text-sm" data-i18n="safe_item4_desc">The code is on GitHub. See exactly what it does. No telemetry, no hidden behavior.</p>
               </div>
             </div>
           </div>
@@ -352,10 +358,10 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold mb-2">Protected by Design</h3>
-              <p class="text-slate-400 mb-6">Your mods are moved to:</p>
+              <h3 class="text-2xl font-bold mb-2" data-i18n="safe_promo_title">Protected by Design</h3>
+              <p class="text-slate-400 mb-6" data-i18n="safe_promo_desc">Your mods are moved to:</p>
               <code class="block bg-[#020617] px-4 py-3 rounded-lg text-sm font-mono text-wj-teal break-all">F:\Wabbajack\WLC_RecycleBin\2026-03-01_14-30-00\</code>
-              <p class="text-slate-500 text-xs mt-4">Timestamped folders for easy recovery</p>
+              <p class="text-slate-500 text-xs mt-4" data-i18n="safe_promo_cap">Timestamped folders for easy recovery</p>
             </div>
           </div>
         </div>
@@ -368,80 +374,80 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4">FAQ</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-        <p class="text-slate-400 text-lg">Got questions? We've got answers.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="faq_title">Frequently Asked Questions</h2>
+        <p class="text-slate-400 text-lg" data-i18n="faq_desc">Got questions? We've got answers.</p>
       </div>
       
       <div class="space-y-4">
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>Will this break my modlists?</span>
+            <span data-i18n="faq_q1">Will this break my modlists?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>No. The orphan cleanup only removes mods not used by any of your selected modlists. If you select all your active modlists, everything they need stays.</p>
+            <p data-i18n="faq_a1">No. The orphan cleanup only removes mods not used by any of your selected modlists. If you select all your active modlists, everything they need stays.</p>
           </div>
         </details>
         
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>How much space can I save?</span>
+            <span data-i18n="faq_q2">How much space can I save?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>Users typically recover 50-200 GB. If you've been modding for years, it could be 500GB or more.</p>
+            <p data-i18n="faq_a2">Users typically recover 50-200 GB. If you've been modding for years, it could be 500GB or more.</p>
           </div>
         </details>
         
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>What if I want to try an old modlist again?</span>
+            <span data-i18n="faq_q3">What if I want to try an old modlist again?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>Wabbajack will just re-download what it needs. Keeping old mods "just in case" is usually not necessary.</p>
+            <p data-i18n="faq_a3">Wabbajack will just re-download what it needs. Keeping old mods "just in case" is usually not necessary.</p>
           </div>
         </details>
         
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>Does it work on Linux / Steam Deck?</span>
+            <span data-i18n="faq_q4">Does it work on Linux / Steam Deck?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>Yes! Native Linux binaries are available. Perfect for Steam Deck users running Wabbajack through Proton.</p>
+            <p data-i18n="faq_a4">Yes! Native Linux binaries are available. Perfect for Steam Deck users running Wabbajack through Proton.</p>
           </div>
         </details>
         
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>Where does it move deleted files?</span>
+            <span data-i18n="faq_q5">Where does it move deleted files?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_RecycleBin</code> inside your downloads folder with a timestamp subfolder.</p>
+            <p data-i18n="faq_a5">To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_RecycleBin</code> inside your downloads folder with a timestamp subfolder.</p>
           </div>
         </details>
         
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
-            <span>Is it really free?</span>
+            <span data-i18n="faq_q6">Is it really free?</span>
             <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400">
-            <p>Yes, 100% free and open source under GPL-3.0 license. No ads, no premium features, no data collection.</p>
+            <p data-i18n="faq_a6">Yes, 100% free and open source under GPL-3.0 license. No ads, no premium features, no data collection.</p>
           </div>
         </details>
       </div>
@@ -452,9 +458,9 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
   <section id="download" class="py-16 lg:py-20 bg-[#020617]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4">Get Started</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Download Wabbajack Library Cleaner</h2>
-        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Choose your platform and start cleaning. It's free, fast, and safe.</p>
+        <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4" data-i18n="dl_badge">Get Started</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-i18n="dl_title">Download Wabbajack Library Cleaner</h2>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="dl_desc">Choose your platform and start cleaning. It's free, fast, and safe.</p>
       </div>
       
       <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
@@ -469,7 +475,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
               </svg>
-              Download .exe
+              <span data-i18n="dl_btn_win">Download .exe</span>
             </span>
           </div>
         </a>
@@ -485,7 +491,7 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
               </svg>
-              Download Binary
+              <span data-i18n="dl_btn_lin">Download Binary</span>
             </span>
           </div>
         </a>
@@ -496,17 +502,17 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
           </svg>
-          View Source on GitHub
+          <span data-i18n="footer_src">View Source on GitHub</span>
         </a>
         <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-[#da732c] transition-colors">
           <img src="/nexus-logo.png" alt="" class="w-5 h-5 object-contain opacity-70" aria-hidden="true" />
-          View on Nexus Mods
+          <span data-i18n="footer_nexus">View on Nexus Mods</span>
         </a>
         <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-wj-blue transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
           </svg>
-          All Releases
+          <span data-i18n="footer_rel">All Releases</span>
         </a>
       </div>
     </div>
@@ -528,13 +534,222 @@ import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
         </nav>
         
         <div class="text-sm text-slate-500">
-          Made with <span class="text-red-500">❤️</span> by <a href="https://github.com/Yakrel" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-wj-blue transition-colors">Berkay Yetgin</a>
+          <span data-i18n="footer_made">Made with</span> <span class="text-red-500">❤️</span> <span data-i18n="footer_by">by</span> <a href="https://github.com/Yakrel" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-wj-blue transition-colors">Berkay Yetgin</a>
         </div>
       </div>
       
       <div class="mt-8 pt-8 border-t border-[#334155] text-center text-sm text-slate-500">
-        <p>Wabbajack Library Cleaner is not affiliated with the official Wabbajack project.</p>
+        <p data-i18n="footer_disclaimer">Wabbajack Library Cleaner is not affiliated with the official Wabbajack project.</p>
       </div>
     </div>
   </footer>
+
+  <script is:inline>
+    const translations = {
+      en: {
+        hero_badge: "Built with Rust 🦀",
+        hero_title: "Library Cleaner",
+        hero_desc: "Safely remove <strong>orphaned mods</strong> and <strong>old versions</strong> from your downloads folder. Free up hundreds of gigabytes without breaking your modlists.",
+        hero_os: "Open Source",
+        btn_download: "Download Free",
+        stats_space: "Average Space Recovered",
+        stats_size: "Lightweight App Size",
+        stats_free: "Free & Open Source",
+        prob_badge: "The Problem",
+        prob_title: "Your Disk Space Is Disappearing",
+        prob_desc: "Wabbajack keeps your downloads to make updates faster, but this leads to massive accumulation of orphaned files and obsolete versions over time.",
+        prob_item1_title: "Orphaned Mods",
+        prob_item1_desc: "When you delete a modlist, its downloaded archives stay behind. Tried Lorerim, Nordic Souls, or other lists? Those files remain forever.",
+        prob_item2_title: "Old Versions",
+        prob_item2_desc: "Mods update frequently. Wabbajack keeps every version for rollback. You might have 5-10 copies of the same mod sitting there.",
+        prob_item3_title: "Massive Bloat",
+        prob_item3_desc: "Active modders commonly accumulate 200GB+ of redundant files. Some users report 500GB or more just in unused downloads.",
+        sol_badge: "The Solution",
+        sol_title: "Clean Your Library Safely",
+        sol_desc: "Wabbajack Library Cleaner scans your downloads and lets you safely remove what you don't need.",
+        sol_item1_title: "Smart Detection",
+        sol_item1_desc: "Reads .wabbajack files to understand which mods your modlists actually need.",
+        sol_item2_title: "Orphan Cleanup",
+        sol_item2_desc: "Find and remove mods not used by any of your active modlists.",
+        sol_item3_title: "Version Cleanup",
+        sol_item3_desc: "Keep newest version of each mod, remove all the old duplicates.",
+        sol_item4_title: "Safe Deletion",
+        sol_item4_desc: "Files move to WLC_RecycleBin folder, not permanently deleted. Easily restorable.",
+        how_badge: "Quick & Easy",
+        how_title: "How It Works",
+        how_desc: "Four simple steps to reclaim your disk space. No technical knowledge required.",
+        how_item1_title: "Select Wabbajack Folder",
+        how_item1_desc: "Point to where Wabbajack.exe is installed. Modlists are detected automatically.",
+        how_item2_title: "Select Downloads Folder",
+        how_item2_desc: "Point to your mod downloads folder — the big one eating your disk space.",
+        how_item3_title: "Choose Your Modlists",
+        how_item3_desc: "Check the modlists you're actively using. Everything else becomes fair game.",
+        how_item4_title: "Scan & Clean",
+        how_item4_desc: "Hit scan to preview. Happy with results? Hit clean and watch space come back.",
+        img_badge: "User Interface",
+        img_title: "Modern & Intuitive Design",
+        img_desc: "A clean, dark-themed interface built with modern GUI framework. Easy to use, hard to make mistakes.",
+        img_cap1: "Cleanup In Progress • Click to enlarge",
+        img_cap2: "Cleanup Complete • Click to enlarge",
+        safe_badge: "Your Data Is Safe",
+        safe_title: "Safety First Approach",
+        safe_desc: "We understand how important your mod collection is. That's why we built multiple safety features to prevent any accidental data loss.",
+        safe_item1_title: "Move, Don't Delete",
+        safe_item1_desc: "Files move to a timestamped WLC_RecycleBin folder instead of being permanently deleted. Review, restore, or wipe it when you're ready.",
+        safe_item2_title: "Smart Version Detection",
+        safe_item2_desc: "Won't delete files if it detects patches that need the main file, or same-version files with different content.",
+        safe_item3_title: "Scan Before Delete",
+        safe_item3_desc: "Always preview what will be deleted. See exact file counts and sizes before committing.",
+        safe_item4_title: "100% Open Source",
+        safe_item4_desc: "The code is on GitHub. See exactly what it does. No telemetry, no hidden behavior.",
+        safe_promo_title: "Protected by Design",
+        safe_promo_desc: "Your mods are moved to:",
+        safe_promo_cap: "Timestamped folders for easy recovery",
+        faq_title: "Frequently Asked Questions",
+        faq_desc: "Got questions? We've got answers.",
+        faq_q1: "Will this break my modlists?",
+        faq_a1: "No. The orphan cleanup only removes mods not used by any of your selected modlists. If you select all your active modlists, everything they need stays.",
+        faq_q2: "How much space can I save?",
+        faq_a2: "Users typically recover 50-200 GB. If you've been modding for years, it could be 500GB or more.",
+        faq_q3: "What if I want to try an old modlist again?",
+        faq_a3: "Wabbajack will just re-download what it needs. Keeping old mods 'just in case' is usually not necessary.",
+        faq_q4: "Does it work on Linux / Steam Deck?",
+        faq_a4: "Yes! Native Linux binaries are available. Perfect for Steam Deck users running Wabbajack through Proton.",
+        faq_q5: "Where does it move deleted files?",
+        faq_a5: "To WLC_RecycleBin inside your downloads folder with a timestamp subfolder.",
+        faq_q6: "Is it really free?",
+        faq_a6: "Yes, 100% free and open source under GPL-3.0 license. No ads, no premium features, no data collection.",
+        dl_badge: "Get Started",
+        dl_title: "Download Wabbajack Library Cleaner",
+        dl_desc: "Choose your platform and start cleaning. It's free, fast, and safe.",
+        dl_btn_win: "Download .exe",
+        dl_btn_lin: "Download Binary",
+        footer_src: "View Source on GitHub",
+        footer_nexus: "View on Nexus Mods",
+        footer_rel: "All Releases",
+        footer_made: "Made with",
+        footer_by: "by",
+        footer_disclaimer: "Wabbajack Library Cleaner is not affiliated with the official Wabbajack project."
+      },
+      tr: {
+        hero_badge: "Rust ile Geliştirildi 🦀",
+        hero_title: "Kütüphane Temizleyici",
+        hero_desc: "Downloads klasörünüzdeki <strong>yetim modları</strong> ve <strong>eski sürümleri</strong> güvenle kaldırın. Mod listelerinizi bozmadan yüzlerce gigabayt yer açın.",
+        hero_os: "Açık Kaynak",
+        btn_download: "Ücretsiz İndir",
+        stats_space: "Ortalama Açılan Alan",
+        stats_size: "Hafif Uygulama Boyutu",
+        stats_free: "Ücretsiz ve Açık Kaynak",
+        prob_badge: "Problem",
+        prob_title: "Disk Alanınız Kayboluyor",
+        prob_desc: "Wabbajack, güncellemeleri hızlandırmak için indirdiklerinizi saklar, ancak bu zamanla devasa yetim dosya ve eski sürüm birikmesine neden olur.",
+        prob_item1_title: "Yetim Modlar",
+        prob_item1_desc: "Bir mod listesini sildiğinizde, indirilmiş arşivleri geride kalır. Lorerim, Nordic Souls veya diğer listeleri denediniz mi? O dosyalar sonsuza kadar kalır.",
+        prob_item2_title: "Eski Sürümler",
+        prob_item2_desc: "Modlar sık sık güncellenir. Wabbajack, geri alma (rollback) için her sürümü tutar. Orada duran aynı modun 5-10 kopyasına sahip olabilirsiniz.",
+        prob_item3_title: "Devasa Şişme",
+        prob_item3_desc: "Aktif modcular genellikle 200GB+ gereksiz dosya biriktirir. Bazı kullanıcılar sadece kullanılmayan indirmelerde 500GB veya daha fazlasını rapor ediyor.",
+        sol_badge: "Çözüm",
+        sol_title: "Kütüphanenizi Güvenle Temizleyin",
+        sol_desc: "Wabbajack Library Cleaner indirmelerinizi tarar ve ihtiyacınız olmayanları güvenle kaldırmanıza olanak tanır.",
+        sol_item1_title: "Akıllı Algılama",
+        sol_item1_desc: "Mod listelerinizin gerçekte hangi modlara ihtiyaç duyduğunu anlamak için .wabbajack dosyalarını okur.",
+        sol_item2_title: "Yetim Temizliği",
+        sol_item2_desc: "Aktif mod listelerinizden herhangi biri tarafından kullanılmayan modları bulun ve kaldırın.",
+        sol_item3_title: "Sürüm Temizliği",
+        sol_item3_desc: "Her modun en yeni sürümünü tutun, tüm eski kopyaları kaldırın.",
+        sol_item4_title: "Güvenli Silme",
+        sol_item4_desc: "Dosyalar kalıcı olarak silinmez, WLC_RecycleBin klasörüne taşınır. Kolayca geri yüklenebilir.",
+        how_badge: "Hızlı ve Kolay",
+        how_title: "Nasıl Çalışır",
+        how_desc: "Disk alanınızı geri kazanmak için dört basit adım. Teknik bilgi gerekmez.",
+        how_item1_title: "Wabbajack Klasörünü Seçin",
+        how_item1_desc: "Wabbajack.exe'nin yüklü olduğu yeri gösterin. Mod listeleri otomatik olarak algılanır.",
+        how_item2_title: "Downloads Klasörünü Seçin",
+        how_item2_desc: "Mod indirmelerinizin olduğu klasörü seçin — disk alanınızı yiyen o büyük olanı.",
+        how_item3_title: "Mod Listelerinizi Seçin",
+        how_item3_desc: "Aktif olarak kullandığınız mod listelerini işaretleyin. Diğer her şey temizlenebilir hale gelir.",
+        how_item4_title: "Tara ve Temizle",
+        how_item4_desc: "Önizleme için taraya basın. Sonuçlardan memnun musunuz? Temizleye basın ve alanın geri gelişini izleyin.",
+        img_badge: "Kullanıcı Arayüzü",
+        img_title: "Modern ve Sezgisel Tasarım",
+        img_desc: "Modern GUI framework'ü ile oluşturulmuş temiz, koyu temalı bir arayüz. Kullanımı kolay, hata yapmak zor.",
+        img_cap1: "Temizlik Devam Ediyor • Büyütmek için tıklayın",
+        img_cap2: "Temizlik Tamamlandı • Büyütmek için tıklayın",
+        safe_badge: "Verileriniz Güvende",
+        safe_title: "Önce Güvenlik Yaklaşımı",
+        safe_desc: "Mod koleksiyonunuzun ne kadar önemli olduğunu anlıyoruz. Bu nedenle kazara veri kaybını önlemek için çoklu güvenlik özellikleri oluşturduk.",
+        safe_item1_title: "Taşı, Silme",
+        safe_item1_desc: "Dosyalar kalıcı olarak silinmek yerine zaman damgalı bir WLC_RecycleBin klasörüne taşınır. Hazır olduğunuzda inceleyin, geri yükleyin veya tamamen silin.",
+        safe_item2_title: "Akıllı Sürüm Algılama",
+        safe_item2_desc: "Ana dosyaya ihtiyaç duyan yamaları veya farklı içeriğe sahip aynı sürüm dosyalarını algılarsa silmez.",
+        safe_item3_title: "Silmeden Önce Tara",
+        safe_item3_desc: "Her zaman nelerin silineceğini önizleyin. Onaylamadan önce tam dosya sayılarını ve boyutlarını görün.",
+        safe_item4_title: "%100 Açık Kaynak",
+        safe_item4_desc: "Kod GitHub'da. Tam olarak ne yaptığını görün. Telemetri yok, gizli davranış yok.",
+        safe_promo_title: "Tasarım Gereği Korumalı",
+        safe_promo_desc: "Modlarınız şuraya taşınır:",
+        safe_promo_cap: "Kolay kurtarma için zaman damgalı klasörler",
+        faq_title: "Sıkça Sorulan Sorular",
+        faq_desc: "Sorularınız mı var? Cevaplarımız var.",
+        faq_q1: "Bu mod listelerimi bozar mı?",
+        faq_a1: "Hayır. Yetim temizliği sadece seçtiğiniz mod listelerinden herhangi biri tarafından kullanılmayan modları kaldırır. Tüm aktif mod listelerinizi seçerseniz, ihtiyaç duydukları her şey kalır.",
+        faq_q2: "Ne kadar yer kazanabilirim?",
+        faq_a2: "Kullanıcılar genellikle 50-200 GB kurtarır. Yıllardır mod yapıyorsanız, 500GB veya daha fazlası olabilir.",
+        faq_q3: "Ya eski bir mod listesini tekrar denemek istersem?",
+        faq_a3: "Wabbajack ihtiyacı olanı tekrar indirecektir. Eski modları 'her ihtimale karşı' tutmak genellikle gerekli değildir.",
+        faq_q4: "Linux / Steam Deck üzerinde çalışır mı?",
+        faq_a4: "Evet! Yerel Linux binary'leri mevcut. Proton üzerinden Wabbajack çalıştıran Steam Deck kullanıcıları için mükemmel.",
+        faq_q5: "Silinen dosyaları nereye taşıyor?",
+        faq_a5: "Downloads klasörünüzün içindeki WLC_RecycleBin klasörüne, zaman damgalı bir alt klasörle birlikte.",
+        faq_q6: "Gerçekten ücretsiz mi?",
+        faq_a6: "Evet, GPL-3.0 lisansı altında %100 ücretsiz ve açık kaynak. Reklam yok, premium özellik yok, veri toplama yok.",
+        dl_badge: "Başlayın",
+        dl_title: "Wabbajack Library Cleaner'ı İndirin",
+        dl_desc: "Platformunuzu seçin ve temizliğe başlayın. Ücretsiz, hızlı ve güvenli.",
+        dl_btn_win: ".exe İndir",
+        dl_btn_lin: Binary İndir,
+        footer_src: "GitHub'da Kaynağı Görüntüle",
+        footer_nexus: "Nexus Mods'da Görüntüle",
+        footer_rel: "Tüm Sürümler",
+        footer_made: "Yapan",
+        footer_by: "Berkay Yetgin",
+        footer_disclaimer: "Wabbajack Library Cleaner, resmi Wabbajack projesiyle bağlantılı değildir."
+      }
+    };
+
+    let currentLang = localStorage.getItem('wlc-lang') || (navigator.language.startsWith('tr') ? 'tr' : 'en');
+
+    function updateContent() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.innerHTML = translations[currentLang][key];
+        }
+      });
+
+      // Update active button state
+      document.getElementById('btn-en').classList.toggle('bg-wj-blue', currentLang === 'en');
+      document.getElementById('btn-en').classList.toggle('text-white', currentLang === 'en');
+      document.getElementById('btn-tr').classList.toggle('bg-wj-blue', currentLang === 'tr');
+      document.getElementById('btn-tr').classList.toggle('text-white', currentLang === 'tr');
+      
+      document.documentElement.lang = currentLang;
+    }
+
+    document.getElementById('btn-en').addEventListener('click', () => {
+      currentLang = 'en';
+      localStorage.setItem('wlc-lang', currentLang);
+      updateContent();
+    });
+
+    document.getElementById('btn-tr').addEventListener('click', () => {
+      currentLang = 'tr';
+      localStorage.setItem('wlc-lang', currentLang);
+      updateContent();
+    });
+
+    // Initial load
+    updateContent();
+  </script>
 </Layout>
