@@ -185,8 +185,8 @@ export const translations = {
     footer_src: "GitHub'da Kaynağı Görüntüle",
     footer_nexus: "Nexus Mods'da Görüntüle",
     footer_rel: "Tüm Sürümler",
-    footer_made: "Yapan",
-    footer_by: "Berkay Yetgin",
+    footer_made: "❤️ ile",
+    footer_by: "tarafından yapıldı",
     footer_disclaimer: "Wabbajack Library Cleaner, resmi Wabbajack projesiyle bağlantılı değildir.",
   },
 } as const;
