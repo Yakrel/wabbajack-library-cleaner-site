@@ -4,23 +4,29 @@ import '../styles/global.css'
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
   canonicalUrl?: string;
+  alternateUrl?: string;
 }
 
 const { 
   title, 
   description = "Free up disk space by cleaning orphaned mods and old versions from your Wabbajack downloads folder. Safe, fast, and open-source GUI tool for Windows & Linux.",
+  lang = "en",
   canonicalUrl,
+  alternateUrl,
 } = Astro.props;
 
 const siteName = "Wabbajack Library Cleaner";
 const siteUrl = "https://cleaner.byetgin.com";
 const currentUrl = canonicalUrl ?? (siteUrl + Astro.url.pathname).replace(/\/\//g, '/').replace('https:/', 'https://');
 const keywords = "Wabbajack, mod cleaner, disk cleanup, modding tool, Skyrim mods, orphaned mods, disk space, Wabbajack downloads, mod manager, modlist cleanup, Wabbajack Library Cleaner";
+const altLang = lang === 'en' ? 'tr' : 'en';
+const altUrl = alternateUrl ?? (lang === 'en' ? `${siteUrl}/tr/` : `${siteUrl}/`);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,10 +61,10 @@ const keywords = "Wabbajack, mod cleaner, disk cleanup, modding tool, Skyrim mod
   
   <!-- Canonical -->
   <link rel="canonical" href={currentUrl}>
-  
+
   <!-- Hreflang -->
-  <link rel="alternate" hreflang="en" href={currentUrl}>
-  <link rel="alternate" hreflang="tr" href={currentUrl}>
+  <link rel="alternate" hreflang={lang} href={currentUrl}>
+  <link rel="alternate" hreflang={altLang} href={altUrl}>
   <link rel="alternate" hreflang="x-default" href="https://cleaner.byetgin.com/">
   
   <!-- Favicon -->

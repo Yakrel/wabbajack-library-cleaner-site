@@ -1,25 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import mainImg from '../assets/screenshots/cleaning-in-progress.png';
-import cleanupCompleteImg from '../assets/screenshots/cleanup-complete.png';
-import { translations } from '../i18n/translations';
+import mainImg from '../../assets/screenshots/cleaning-in-progress.png';
+import cleanupCompleteImg from '../../assets/screenshots/cleanup-complete.png';
+import { translations } from '../../i18n/translations';
 
-const t = translations.en;
+const t = translations.tr;
 ---
 
 <Layout
   title={t.page_title}
   description={t.page_desc}
-  lang="en"
-  canonicalUrl="https://cleaner.byetgin.com/"
-  alternateUrl="https://cleaner.byetgin.com/tr/"
+  lang="tr"
+  canonicalUrl="https://cleaner.byetgin.com/tr/"
+  alternateUrl="https://cleaner.byetgin.com/"
 >
   
   <!-- Language Switcher -->
   <div class="fixed top-4 right-4 z-50 flex gap-2">
-    <span class="px-3 py-1.5 bg-wj-blue border border-wj-blue/60 rounded-lg text-xs font-semibold text-white">EN</span>
-    <a href="/tr/" class="px-3 py-1.5 bg-[#1e293b] border border-[#334155] rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-colors">TR</a>
+    <a href="/" class="px-3 py-1.5 bg-[#1e293b] border border-[#334155] rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-colors">EN</a>
+    <span class="px-3 py-1.5 bg-wj-blue border border-wj-blue/60 rounded-lg text-xs font-semibold text-white">TR</span>
   </div>
 
   <!-- Hero Section -->
@@ -88,7 +88,7 @@ const t = translations.en;
         <div class="relative">
           <div class="absolute -inset-4 bg-gradient-to-r from-wj-blue/20 to-wj-teal/20 rounded-2xl blur-2xl"></div>
           <div class="relative bg-[#0f172a] rounded-2xl overflow-hidden border border-[#334155] shadow-2xl">
-            <Image src={mainImg} alt="Wabbajack Library Cleaner main interface showing mod cleanup options" class="w-full h-auto" data-zoomable loading="eager" />
+            <Image src={mainImg} alt="Wabbajack Library Cleaner ana arayüzü - mod temizleme seçenekleri" class="w-full h-auto" data-zoomable loading="eager" />
           </div>
         </div>
       </div>
@@ -186,7 +186,6 @@ const t = translations.en;
           <h3 class="text-lg font-semibold mb-2">{t.sol_item1_title}</h3>
           <p class="text-slate-400 text-sm">{t.sol_item1_desc}</p>
         </div>
-        
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
           <div class="w-16 h-16 mx-auto mb-5 bg-wj-blue/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-blue/20 group-hover:scale-110 transition-all duration-300">
             <svg class="w-8 h-8 text-wj-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +195,6 @@ const t = translations.en;
           <h3 class="text-lg font-semibold mb-2">{t.sol_item2_title}</h3>
           <p class="text-slate-400 text-sm">{t.sol_item2_desc}</p>
         </div>
-        
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
           <div class="w-16 h-16 mx-auto mb-5 bg-wj-blue/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-blue/20 group-hover:scale-110 transition-all duration-300">
             <svg class="w-8 h-8 text-wj-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +204,6 @@ const t = translations.en;
           <h3 class="text-lg font-semibold mb-2">{t.sol_item3_title}</h3>
           <p class="text-slate-400 text-sm">{t.sol_item3_desc}</p>
         </div>
-        
         <div class="group text-center p-6 rounded-2xl bg-[#1e293b]/50 border border-transparent hover:border-wj-blue/30 transition-all duration-300">
           <div class="w-16 h-16 mx-auto mb-5 bg-wj-teal/10 rounded-2xl flex items-center justify-center group-hover:bg-wj-teal/20 group-hover:scale-110 transition-all duration-300">
             <svg class="w-8 h-8 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,7 +225,6 @@ const t = translations.en;
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">{t.how_title}</h2>
         <p class="text-slate-400 text-lg max-w-2xl mx-auto">{t.how_desc}</p>
       </div>
-      
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="relative">
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
@@ -238,7 +234,6 @@ const t = translations.en;
             <p class="text-slate-400 text-sm">{t.how_item1_desc}</p>
           </div>
         </div>
-        
         <div class="relative">
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
           <div class="text-center">
@@ -247,7 +242,6 @@ const t = translations.en;
             <p class="text-slate-400 text-sm">{t.how_item2_desc}</p>
           </div>
         </div>
-        
         <div class="relative">
           <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-wj-blue to-transparent -translate-x-8"></div>
           <div class="text-center">
@@ -256,7 +250,6 @@ const t = translations.en;
             <p class="text-slate-400 text-sm">{t.how_item3_desc}</p>
           </div>
         </div>
-        
         <div class="text-center">
           <div class="w-16 h-16 bg-gradient-to-br from-wj-teal to-[#0f766e] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-teal-900/30">4</div>
           <h3 class="text-lg font-semibold mb-3">{t.how_item4_title}</h3>
@@ -274,20 +267,18 @@ const t = translations.en;
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">{t.img_title}</h2>
         <p class="text-slate-400 text-lg max-w-2xl mx-auto">{t.img_desc}</p>
       </div>
-      
       <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <figure class="relative group">
           <div class="absolute -inset-2 bg-gradient-to-r from-wj-blue/20 to-wj-teal/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
-            <Image src={mainImg} alt="Wabbajack Library Cleaner showing real-time progress bar during cleanup" class="w-full h-auto" data-zoomable loading="lazy" />
+            <Image src={mainImg} alt="Wabbajack Library Cleaner temizleme işlemi devam ederken ilerleme çubuğu" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
           <figcaption class="text-center text-slate-400 text-sm mt-4">{t.img_cap1}</figcaption>
         </figure>
-
         <figure class="relative group">
           <div class="absolute -inset-2 bg-gradient-to-r from-wj-teal/20 to-wj-blue/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative bg-[#1e293b] rounded-xl overflow-hidden border border-[#334155] shadow-2xl hover:border-wj-blue/30 transition-colors">
-            <Image src={cleanupCompleteImg} alt="Wabbajack Library Cleaner after cleanup — 0 orphaned files remaining, completion message in log" class="w-full h-auto" data-zoomable loading="lazy" />
+            <Image src={cleanupCompleteImg} alt="Wabbajack Library Cleaner temizlik tamamlandı - 0 yetim dosya kaldı" class="w-full h-auto" data-zoomable loading="lazy" />
           </div>
           <figcaption class="text-center text-slate-400 text-sm mt-4">{t.img_cap2}</figcaption>
         </figure>
@@ -303,67 +294,39 @@ const t = translations.en;
           <span class="inline-block px-4 py-1.5 bg-wj-teal/10 text-wj-teal text-sm font-medium rounded-full mb-4">{t.safe_badge}</span>
           <h2 class="text-3xl sm:text-4xl font-bold mb-6">{t.safe_title}</h2>
           <p class="text-slate-400 text-lg mb-8">{t.safe_desc}</p>
-          
           <div class="space-y-4">
             <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
               <div class="w-10 h-10 bg-wj-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
+                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
               </div>
-              <div>
-                <h3 class="font-semibold mb-1">{t.safe_item1_title}</h3>
-                <p class="text-slate-400 text-sm">{t.safe_item1_desc}</p>
-              </div>
+              <div><h3 class="font-semibold mb-1">{t.safe_item1_title}</h3><p class="text-slate-400 text-sm">{t.safe_item1_desc}</p></div>
             </div>
-            
             <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
               <div class="w-10 h-10 bg-wj-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
+                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
-              <div>
-                <h3 class="font-semibold mb-1">{t.safe_item2_title}</h3>
-                <p class="text-slate-400 text-sm">{t.safe_item2_desc}</p>
-              </div>
+              <div><h3 class="font-semibold mb-1">{t.safe_item2_title}</h3><p class="text-slate-400 text-sm">{t.safe_item2_desc}</p></div>
             </div>
-            
             <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
               <div class="w-10 h-10 bg-wj-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
+                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
               </div>
-              <div>
-                <h3 class="font-semibold mb-1">{t.safe_item3_title}</h3>
-                <p class="text-slate-400 text-sm">{t.safe_item3_desc}</p>
-              </div>
+              <div><h3 class="font-semibold mb-1">{t.safe_item3_title}</h3><p class="text-slate-400 text-sm">{t.safe_item3_desc}</p></div>
             </div>
-            
             <div class="flex gap-4 items-start p-4 bg-[#1e293b] rounded-xl border border-[#334155]">
               <div class="w-10 h-10 bg-wj-teal/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
+                <svg class="w-5 h-5 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
               </div>
-              <div>
-                <h3 class="font-semibold mb-1">{t.safe_item4_title}</h3>
-                <p class="text-slate-400 text-sm">{t.safe_item4_desc}</p>
-              </div>
+              <div><h3 class="font-semibold mb-1">{t.safe_item4_title}</h3><p class="text-slate-400 text-sm">{t.safe_item4_desc}</p></div>
             </div>
           </div>
         </div>
-        
         <div class="relative hidden lg:block">
           <div class="absolute inset-0 bg-gradient-to-r from-wj-teal/10 to-wj-blue/10 rounded-3xl blur-3xl"></div>
           <div class="relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155]">
             <div class="text-center">
               <div class="w-24 h-24 bg-wj-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-12 h-12 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
+                <svg class="w-12 h-12 text-wj-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
               </div>
               <h3 class="text-2xl font-bold mb-2">{t.safe_promo_title}</h3>
               <p class="text-slate-400 mb-6">{t.safe_promo_desc}</p>
@@ -380,70 +343,50 @@ const t = translations.en;
   <section id="faq" class="py-16 lg:py-20 bg-[#0f172a]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4">FAQ</span>
+        <span class="inline-block px-4 py-1.5 bg-wj-blue/10 text-wj-blue text-sm font-medium rounded-full mb-4">SSS</span>
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">{t.faq_title}</h2>
         <p class="text-slate-400 text-lg">{t.faq_desc}</p>
       </div>
-      
       <div class="space-y-4">
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q1}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a1}</p></div>
         </details>
-        
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q2}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a2}</p></div>
         </details>
-        
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q3}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a3}</p></div>
         </details>
-        
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q4}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a4}</p></div>
         </details>
-        
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q5}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
-          <div class="px-6 pb-5 text-slate-400">
-            <p>To <code class="bg-[#020617] px-2 py-1 rounded text-sm font-mono">WLC_RecycleBin</code> inside your downloads folder with a timestamp subfolder.</p>
-          </div>
+          <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a5}</p></div>
         </details>
-        
         <details class="group bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
           <summary class="px-6 py-5 cursor-pointer font-semibold flex justify-between items-center list-none">
             <span>{t.faq_q6}</span>
-            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <svg class="w-5 h-5 text-wj-blue transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </summary>
           <div class="px-6 pb-5 text-slate-400"><p>{t.faq_a6}</p></div>
         </details>
@@ -459,7 +402,6 @@ const t = translations.en;
         <h2 class="text-3xl sm:text-4xl font-bold mb-4">{t.dl_title}</h2>
         <p class="text-slate-400 text-lg max-w-2xl mx-auto">{t.dl_desc}</p>
       </div>
-      
       <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
         <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner.exe"
            class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-[#0078d4]/50 transition-all duration-300 card-hover text-center">
@@ -468,37 +410,29 @@ const t = translations.en;
             <div class="text-5xl mb-4">🪟</div>
             <h3 class="text-2xl font-bold mb-2">Windows</h3>
             <p class="text-slate-400 mb-6">Windows 10/11 (64-bit)</p>
-            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#0078d4] hover:bg-[#106ebe] text-white rounded-xl font-semibold transition-colors">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-              </svg>
+            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#0078d4] text-white rounded-xl font-semibold">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
               {t.dl_btn_win}
             </span>
           </div>
         </a>
-        
         <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases/latest/download/wabbajack-library-cleaner-linux"
            class="group relative bg-[#1e293b] rounded-2xl p-8 border border-[#334155] hover:border-[#FCC624]/50 transition-all duration-300 card-hover text-center">
           <div class="absolute inset-0 bg-gradient-to-br from-[#FCC624]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <div class="relative">
             <div class="text-5xl mb-4">🐧</div>
             <h3 class="text-2xl font-bold mb-2">Linux</h3>
-            <p class="text-slate-400 mb-6">Any modern distro (64-bit)</p>
-            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#FCC624] hover:bg-[#e5b320] text-black rounded-xl font-semibold transition-colors">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-              </svg>
+            <p class="text-slate-400 mb-6">Tüm modern dağıtımlar (64-bit)</p>
+            <span class="inline-flex items-center gap-2 px-6 py-3 bg-[#FCC624] text-black rounded-xl font-semibold">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
               {t.dl_btn_lin}
             </span>
           </div>
         </a>
       </div>
-      
       <div class="flex flex-wrap justify-center gap-6 text-sm">
         <a href="https://github.com/Yakrel/wabbajack-library-cleaner" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
-          </svg>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
           {t.footer_src}
         </a>
         <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-[#da732c] transition-colors">
@@ -506,9 +440,7 @@ const t = translations.en;
           {t.footer_nexus}
         </a>
         <a href="https://github.com/Yakrel/wabbajack-library-cleaner/releases" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-wj-blue transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-          </svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
           {t.footer_rel}
         </a>
       </div>
@@ -523,18 +455,15 @@ const t = translations.en;
           <img src="/favicon.png" alt="" class="w-7 h-7 object-contain" aria-hidden="true" />
           <span class="font-bold gradient-text">Wabbajack Library Cleaner</span>
         </div>
-        
         <nav class="flex flex-wrap justify-center gap-6 text-sm" aria-label="Footer navigation">
           <a href="https://github.com/Yakrel/wabbajack-library-cleaner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
           <a href="https://www.nexusmods.com/skyrimspecialedition/mods/164533" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-[#da732c] transition-colors">Nexus Mods</a>
-          <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GPL-3.0 License</a>
+          <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GPL-3.0 Lisansı</a>
         </nav>
-        
         <div class="text-sm text-slate-500">
-          {t.footer_made} <span class="text-red-500">❤️</span> {t.footer_by} <a href="https://github.com/Yakrel" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-wj-blue transition-colors">Berkay Yetgin</a>
+          {t.footer_made} <span class="text-red-500">❤️</span> <a href="https://github.com/Yakrel" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-wj-blue transition-colors">{t.footer_by}</a>
         </div>
       </div>
-      
       <div class="mt-8 pt-8 border-t border-[#334155] text-center text-sm text-slate-500">
         <p>{t.footer_disclaimer}</p>
       </div>
@@ -542,48 +471,25 @@ const t = translations.en;
   </footer>
 
   <script is:inline>
-    // Lightbox functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
-    
     function openLightbox(src, alt) {
-      lightboxImg.src = src;
-      lightboxImg.alt = alt;
-      lightbox.classList.remove('hidden');
-      lightbox.classList.add('flex');
+      lightboxImg.src = src; lightboxImg.alt = alt;
+      lightbox.classList.remove('hidden'); lightbox.classList.add('flex');
       document.body.style.overflow = 'hidden';
     }
-    
     function closeLightbox() {
-      lightbox.classList.add('hidden');
-      lightbox.classList.remove('flex');
+      lightbox.classList.add('hidden'); lightbox.classList.remove('flex');
       document.body.style.overflow = '';
     }
-    
     document.querySelectorAll('[data-zoomable]').forEach(img => {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', () => openLightbox(img.src, img.alt));
     });
-    
     lightboxClose?.addEventListener('click', closeLightbox);
     lightboxImg?.addEventListener('click', closeLightbox);
-    lightbox?.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-    
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
+    lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
   </script>
 </Layout>
