@@ -13,5 +13,21 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [sitemap()]
+  integrations: [
+    sitemap({
+      changefreq: 'weekly',
+      priority: 1.0,
+      lastmod: new Date(),
+      serialize(item) {
+        if (item.url === 'https://cleaner.byetgin.com/') {
+          return {
+            ...item,
+            changefreq: 'weekly',
+            priority: 1.0,
+          };
+        }
+        return item;
+      },
+    })
+  ]
 });
